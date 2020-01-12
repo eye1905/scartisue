@@ -78,9 +78,55 @@
 			grid-gap: 1rem;
 		}
 
+		.card-brand{
+			height: 100%;
+			color: black;
+		}
+
+		.card-brand img{
+			width: 100%;
+			height: 100%;
+		}
+
+		.card-brand:hover{
+			z-index: 1000;
+			-moz-transform: scale(1.1);
+			-webkit-transform: scale(1.1);
+			-o-transform: scale(1.1);
+			-ms-transform: scale(1.1);
+			-webkit-transform: scale(1.1);
+			transform: scale(1.1);
+
+			-webkit-transition: transform 1s ease-in-out;
+			-moz-transition:transform 1s ease-in-out;
+			-ms-transition:transform 1s ease-in-out;
+		}
+
+		.img-shadow:hover{
+			z-index: 1000;
+			-moz-transform: scale(1.2);
+			-webkit-transform: scale(1.2);
+			-o-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+			-webkit-transform: scale(1.2);
+			transform: scale(1.2);
+
+			-webkit-transition: transform 1s ease-in-out;
+			-moz-transition:transform 1s ease-in-out;
+			-ms-transition:transform 1s ease-in-out;
+		}
+
 		/* css media */
 		@media (min-width: 300px) {
 			.cards { grid-template-columns: repeat(2, 1fr); }
+			#fav-section{
+				width: 80%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.img-shadow{
+				width: 70%;
+			}
 			.form-header{
 				width: 250px;
 			}
@@ -88,6 +134,12 @@
 
 		@media (min-width: 600px) {
 			.cards { grid-template-columns: repeat(3, 1fr); }
+			#fav-section{
+				width: 100%;
+			}
+			.img-shadow{
+				width: 70%;
+			}
 			.form-header{
 				width: 500px;
 			}
@@ -95,6 +147,12 @@
 
 		@media (min-width: 900px) {
 			.cards { grid-template-columns: repeat(4, 1fr); }
+			#fav-section{
+				width: 100%;
+			}
+			.img-shadow{
+				width: 90%;
+			}
 			.form-header{
 				width: 700px;
 			}
@@ -102,11 +160,16 @@
 
 		@media (min-width: 1100px) {
 			.cards { grid-template-columns: repeat(4, 1fr); }
+			#fav-section{
+				width: 100%;
+			}
+			.img-shadow{
+				width: 90%;
+			}
 			.form-header{
 				width: 900px;
 			}
 		}
-
 
 		/* css for footer */
 		.background-footer{
@@ -137,6 +200,7 @@
 	<link href="modal.css" rel="stylesheet"/>
 </head>
 <body>
+
 	<!-- Navbar one dark -->
 	<nav class="navbar navbar-light bg-dark" style="height: 40px; padding-bottom:2%; margin-top: -0.5%">
 		<div class="text-left">
@@ -177,7 +241,7 @@
 					<li class="nav-item nav-cek">
 						<div class="btn-group">
 							<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<b>Kategori</b>
+								<b>Category</b>
 							</button>
 							<div class="dropdown-menu">
 								<a class="dropdown-item" href="#">Kaos</a>
@@ -199,7 +263,7 @@
 		<div class="text-right" style="margin-left: 1%">
 			<div class="btn-group nav-cek">
 				<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<b>Belanja <i class="fa fa-shopping-cart"></i></b>
+					<b>Cart <i class="fa fa-shopping-cart"></i></b>
 				</button>
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="#">Keranjang</a>
@@ -208,13 +272,12 @@
 			</div>
 
 			<a class="navbar-brand text-logo" href="#">
-				<b>Akun <i class="fa fa-lock"></i></b>
+				<b>Account <i class="fa fa-lock"></i></b>
 			</a>
 		</div>
 	</nav>
 
 	<!-- Navbar three light hide -->
-
 	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="min-height: 90px;" id="navbar-2">
 		<form class="form-inline text-left" id="form-submit" method="POST" action="#">
 			<div class="text-left">
@@ -342,12 +405,13 @@
 		<!-- this is for content best seller -->
 		<br>
 		<br>
-		<section>
+
+		<section id="fav-section">
 			<div class="card-title text-center">
-				<h4><b>Best Sellers</b></h4>
+				<h4><b>Favorites</b></h4>
 			</div>
 
-			<div class="cards owl-carousel">
+			<div class="owl-carousel owl-theme">
 
 				<div class="item card card-product text-center" style="padding: 1%">
 					<img src="1.png"  alt="...">
@@ -385,14 +449,68 @@
 					<h6 class="card-title">Converse All Star</h6>
 					<p>Rp. 100.000</p>
 				</div>
+
 			</div>
 
 			<div class="text-center" style="margin-top: 5px">
-				<button class="btn btn-md btn-secondary">
-					Lihat ...
+				<button class="btn btn-md btn-secondary" style="border-radius: 20px">
+					<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
 				</button>
 			</div>
 		</section>
+
+		<br><br>
+		<!-- this for content section services -->
+		<section>
+			<div class="card-title text-center">
+				<h4><b>Our Services</b></h4>
+			</div>
+			<br>
+			<div class="row">
+
+				<div class="col-md-3 text-center">
+					<img src="indo.png" class="card-img-top img-shadow" alt="Local Production">
+					<div class="card-body">
+						<h5 class="card-title"><b>Local Production</b></h5>
+						<p class="card-text">
+							Produk yang kami jual adalah barang asli dari produsen asal Indonesia
+						</p>
+					</div>
+				</div>
+
+				<div class="col-md-3 text-center">
+					<img src="quality.png" class="card-img-top img-shadow" alt="Quality 100%">
+					<div class="card-body">
+						<h5 class="card-title"><b>99% Quality</b></h5>
+						<p class="card-text">
+							Kualitas produk yang kami jual 99% terbaik dari yang terbaik
+						</p>
+					</div>
+				</div>
+
+				<div class="col-md-3 text-center">
+					<img src="price.png" class="card-img-top img-shadow" alt="Price">
+					<div class="card-body">
+						<h5 class="card-title"><b>Affordable Prices</b></h5>
+						<p class="card-text">
+							Harga produk yang kami jual terjangkau sesuai kebutuhan anda
+						</p>
+					</div>
+				</div>
+
+				<div class="col-md-3 text-center">
+					<img src="send.png" class="card-img-top img-shadow" alt="Price">
+					<div class="card-body">
+						<h5 class="card-title"><b>All Region Delivery</b></h5>
+						<p class="card-text">
+							Pengiriman barang keseluruh pelosok Indonesia dengan cepat dan aman
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<br>
 		<br>
 
 		<!-- this is for content card produk -->
@@ -428,9 +546,33 @@
 			</div>
 
 			<div class="text-center" style="margin-top: 10px">
-				<button class="btn btn-md btn-secondary">
-					Lihat ...
-				</button>
+				<a href="produk.html" class="btn btn-md btn-secondary" style="border-radius: 20px">
+					<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+				</a>
+			</div>
+		</section>
+
+		<br><br>
+		<section>
+			<div class="card-title text-center">
+				<h4><b>Featured Brands</b></h4>
+			</div>
+
+			<div class="cards">
+				<div class="card card-brand text-center">
+					<img src="efge.png"  alt="...">
+				</div>
+
+				<div class="card card-brand text-center">
+					<img src="efge.png"  alt="...">
+				</div>
+
+				<div class="card card-brand text-center">
+					<img src="efge.png"  alt="...">
+				</div>
+				<div class="card card-brand text-center">
+					<img src="efge.png"  alt="...">
+				</div>
 			</div>
 		</section>
 	</div>
@@ -440,110 +582,111 @@
 		<div class="container-fluid text-center text-md-left content-footer">
 			<div class="row">
 				<div class="col-md-5 mt-md-0 mt-3">
-					<h5 class="text-uppercase" style="color: black">
-						<i class="fa fa-home"></i> Outlete Kami :</h5>
-						<p style="color: #737677;">Medokan Sawah Timur Gg. VI Nomor 36 Medokan Ayu
-							<br> Kec. Rungkut Surabaya Jawa Timur <br>
-							Telp / WA : <a href="#!" style="color: #737677; text-decoration: none;"> +6282330160832</a></p>
-						</div>
-
-						<hr class="clearfix w-100 d-md-none pb-3">
-						<div class="col-md-4 mb-md-2 mb-3">
-							<h5 class="text-uppercase" style="color: black">Link Terkait :</h5>
-							<ul class="list-unstyled">
-								<li>
-									<a href="">Home</a>
-								</li>
-
-								<li>
-									<a href="#">Produk</a>
-								</li>
-
-								<li>
-									<a href="#">Tentang Kami</a>
-								</li>
-
-								<li>
-									<a href="#">Peluang Bisnis</a>
-								</li>
-
-								<li>
-									<a href="#">Berita</a>
-								</li>
-							</ul>
-
-						</div>
-						<div class="col-md-3 mb-md-2 mb-3">
-							<h5 class="text-uppercase" style="color: black">Cari Kami :</h5>
-							<ul class="list-unstyled">
-								<li>
-									<a href="#!"><i class="fa fa-envelope"></i> scartisue0.gmail.com</a>
-								</li>
-								<li>
-									<a href="#!"><i class="fa fa-facebook"></i> @scartisue0</a>
-								</li>
-								<li>
-									<a href="#!"><i class="fa fa-instagram"></i> @scar.tisue</a>
-								</li>
-								<li>
-									<a href="#!"><i class="fa fa-phone"></i> +6282330160832</a>
-								</li>
-								<li>
-									<a href="#!"><i class="fa fa-youtube"></i> @scar.tisue</a>
-								</li>
-							</ul>
-						</div>
-
-					</div>
+					<h5 class="text-uppercase" style="color: black"><i class="fa fa-home"></i> Our Outlete :</h5>
+					<p style="color: #737677;">Jl. Medokan Sawah Timur Gg. VI No. 36 Medokan Ayu
+						<br> Kec. Rungkut Surabaya Jawa Timur <br>
+						Telp / WA : <a href="#!" style="color: #737677; text-decoration: none;"> +6282330160832</a>
+					</p>
 				</div>
 
-				<div class="bg-dark text-center py-4">
-					<a href="http://lsj-express.id/" style="color: #fff; text-decoration: none;">
-						© 2020 Copyright : www.scartisue.com
-					</a>
+				<hr class="clearfix w-100 d-md-none pb-3">
+				<div class="col-md-4 mb-md-2 mb-3">
+					<h5 class="text-uppercase" style="color: black"><i class="fa fa-link"></i> Navigation Links :</h5>
+					<ul class="list-unstyled">
+						<li>
+							<a href="">Home</a>
+						</li>
+
+						<li>
+							<a href="#">About Us</a>
+						</li>
+
+						<li>
+							<a href="#">Products</a>
+						</li>
+
+						<li>
+							<a href="#">Partner</a>
+						</li>
+
+						<li>
+							<a href="#">News</a>
+						</li>
+					</ul>
 				</div>
-			</footer>
 
-		</body>
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+				<hr class="clearfix w-100 d-md-none pb-3">
+				<div class="col-md-3 mb-md-2 mb-3">
+					<h5 class="text-uppercase" style="color: black"><i class="fa fa-search"></i> Find Us :</h5>
+					<ul class="list-unstyled">
+						<li>
+							<a href="#!"><i class="fa fa-envelope"></i> scartisue0.gmail.com</a>
+						</li>
+						<li>
+							<a href="#!"><i class="fa fa-facebook"></i> @scartisue0</a>
+						</li>
+						<li>
+							<a href="#!"><i class="fa fa-instagram"></i> @scar.tisue</a>
+						</li>
+						<li>
+							<a href="#!"><i class="fa fa-phone"></i> +6282330160832</a>
+						</li>
+						<li>
+							<a href="#!"><i class="fa fa-youtube"></i> @scar.tisue</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="bg-dark text-center py-4">
+			<a href="http://scartisue.com/" style="color: #fff; text-decoration: none;">
+				© 2020 Copyright : www.scartisue.com
+			</a>
+		</div>
+	</footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-		<script src="template.js"></script>
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css" rel="stylesheet" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.js"></script>
+<script src="template.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.js"></script>
 
-		<script type="text/javascript">
-			$(document).ready(function() {
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".owl-carousel").owlCarousel({
+			autoPlay: 2000,
+			autoWidth:true,
+			loop: true,
+			margin: 20,
+			center: true,
+			nav: true,
+			dots: true,
+			responsiveClass: true,
+			responsiveRefreshRate: true,
+			responsive : {
+				100 : {
+					items: 2
+				},
+				375 : {
+					items: 2
+				},
+				768 : {
+					items: 3
+				},
+				960 : {
+					items: 4
+				},
+				1200 : {
+					items: 5
+				},
+				1920 : {
+					items: 8
+				}
+			}
+		});
 
-				$(".owl-carousel").owlCarousel({
-					autoPlay: 2000,
-					margin:10,
-					center: true,
-					nav:true,
-					loop:true,
-					responsiveClass:true,
-					responsive: {
-						0:{
-							items:1,
-							nav:true
-						},
-						300:{
-							items:2,
-							nav:true
-						},
-						600:{
-							items:3,
-							nav:true
-						},
-						1000:{
-							items:5,
-							nav:true,
-							loop:false
-						}
-					}
-				});
-
-			});
-		</script>
-		</html>
+	});
+</script>
+</html>
