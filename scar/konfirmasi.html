@@ -320,93 +320,140 @@
 	<!-- This is for body -->
 	<br>
 	<div class="container">
-		<!-- this is for content card produk -->
+		<!-- this is for content -->
 		<section>
 			<div class="card-title text-center">
-				<h4><b>Products</b></h4>
-			</div>
-
-			<div class="cards">
-				<div class="card card-product text-center">
-					<img src="1.png"  alt="...">
-					<h6 class="card-title">Converse All Star</h6>
-					<p>Rp. 100.000</p>
-					<button class="btn btn-sm btn-dark">
-						<i class="fa fa-shopping-cart"></i> Buy
-					</button>
-				</div>
-				<div class="card card-product text-center">
-					<img src="1.png"  alt="...">
-					<h6 class="card-title">Converse All Star</h6>
-					<p>Rp. 100.000</p>
-					<button class="btn btn-sm btn-dark">
-						<i class="fa fa-shopping-cart"></i> Buy
-					</button>
-				</div>
-				<div class="card card-product text-center">
-					<img src="1.png"  alt="...">
-					<h6 class="card-title">Converse All Star</h6>
-					<p>Rp. 100.000</p>
-					<button class="btn btn-sm btn-dark">
-						<i class="fa fa-shopping-cart"></i> Buy
-					</button>
-				</div>
-				<div class="card card-product text-center">
-					<img src="1.png"  alt="...">
-					<h6 class="card-title">Converse All Star</h6>
-					<p>Rp. 100.000</p>
-					<button class="btn btn-sm btn-dark">
-						<i class="fa fa-shopping-cart"></i> Buy
-					</button>
-				</div>
+				<h4><b>Payment Confirmation</b></h4>
+				<p>
+					Thank you for shopping at Scar Tisue! <br>
+					If you have made a payment via BANK TRANSFER / DIGITAL PAYMENT, confirm your payment here so we can process it quickly.
+				</p>
 			</div>
 			<br>
-			<div class="cards">
-				<div class="card card-product text-center">
-					<img src="1.png"  alt="...">
-					<h6 class="card-title">Converse All Star</h6>
-					<p>Rp. 100.000</p>
-					<button class="btn btn-sm btn-dark">
-						<i class="fa fa-shopping-cart"></i> Buy
-					</button>
+			
+			<div class="row">
+				<div class="col-md-2">
+					
 				</div>
-				<div class="card card-product text-center">
-					<img src="1.png"  alt="...">
-					<h6 class="card-title">Converse All Star</h6>
-					<p>Rp. 100.000</p>
-					<button class="btn btn-sm btn-dark">
-						<i class="fa fa-shopping-cart"></i> Buy
-					</button>
+				<div class="col-md-8 card">
+					<br>
+					<form action="" method="POST" enctype="multipart/form-data">
+						<div class="form-group row text-center">
+							<label for="inputPassword" class="col-sm-3 col-form-label"><b>Transaction Code :</b></label>
+							<div class="col-sm-7">
+								<input type="text" class="form-control" id="kode" placeholder="Type a transition code ...">
+							</div>
+							<div class="col-sm-2">
+								<button class="btn btn-sm btn-dark" style="margin-top: 0px; min-height: 39px">
+									<i class="fa fa-search"></i> Search
+								</button>
+							</div>
+						</div>
+					</form>
 				</div>
-				<div class="card card-product text-center">
-					<img src="1.png"  alt="...">
-					<h6 class="card-title">Converse All Star</h6>
-					<p>Rp. 100.000</p>
-					<button class="btn btn-sm btn-dark">
-						<i class="fa fa-shopping-cart"></i> Buy
-					</button>
-				</div>
-				<div class="card card-product text-center">
-					<img src="1.png"  alt="...">
-					<h6 class="card-title">Converse All Star</h6>
-					<p>Rp. 100.000</p>
-					<button class="btn btn-sm btn-dark">
-						<i class="fa fa-shopping-cart"></i> Buy
-					</button>
+				<div class="col-md-2">
+					
 				</div>
 			</div>
 
-			<div class="text-center" style="margin-top: 2%">
-				<button class="btn btn-md btn-secondary" style="border-radius: 20px">
-					<i class="fa fa-refresh" aria-hidden="true"></i> Load More ...
-				</button>
+			<div class="row">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 card">
+					<br>
+					<form>
+						<div class="form-group row text-left">
+							<label for="inputPassword" class="col-sm-4 col-form-label"><b>Transaction Code :</b></label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="kode" name="kode" readonly="true" placeholder="Your transition code">
+								<label style="color: red">* Required Transaction Code ...</label>
+							</div>
+						</div>
+						<div class="form-group row text-left">
+							<label for="inputPassword" class="col-sm-4 col-form-label"><b>Your Method :</b></label>
+							<div class="col-sm-8">
+								<select class="form-control" id="bank" name="bank">
+									<option value="1">Bank Central Asia (BCA)</option>
+									<option value="2">Bank Negara Indonesia (BNI)</option>
+									<option value="3">Bank Rakyat Indonesia (BRI)</option>
+									<option value="4">Bank Mandiri (Mandiri)</option>
+									<option value="5">Gopay</option>
+									<option value="6">Ovo</option>
+									<option value="7">Link Aja</option>
+									<option value="7">Dana</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group row text-left">
+							<label for="inputPassword" class="col-sm-4 col-form-label"><b> Account Number :</b></label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="kedoku" name="kodeku" placeholder="Your Account Number ...">
+							</div>
+						</div>
+
+						<div class="form-group row text-left">
+							<label for="inputPassword" class="col-sm-4 col-form-label"><b> Account Name :</b></label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="name" name="name" placeholder="Your Account Name ...">
+							</div>
+						</div>
+
+						<div class="form-group row text-left">
+							<label for="inputPassword" class="col-sm-4 col-form-label"><b>Payment Method :</b></label>
+							<div class="col-sm-8">
+								<select class="form-control" id="tujuan" name="tujuan">
+									<option value="1">Bank Central Asia (BCA)</option>
+									<option value="2">Bank Negara Indonesia (BNI)</option>
+									<option value="3">Bank Rakyat Indonesia (BRI)</option>
+									<option value="4">Bank Mandiri (Mandiri)</option>
+									<option value="5">Gopay</option>
+									<option value="6">Ovo</option>
+									<option value="7">Link Aja</option>
+									<option value="8">Dana</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group row text-left">
+							<label for="inputPassword" class="col-sm-4 col-form-label"><b>Nominal Transaction :</b></label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="nominal" name="nominal" placeholder="Type a nominal transition ...">
+							</div>
+						</div>
+
+						<div class="form-group row text-left">
+							<label for="inputPassword" class="col-sm-4 col-form-label"><b>Proof of Transaction :</b></label>
+							<div class="col-sm-8">
+								<input type="file" class="form-control" id="kode" placeholder="Choose the proof of transaction ...">
+								<label style="color: red">* Required File Choose ...</label>
+							</div>
+						</div>
+
+						<div class="form-group row text-center">
+							<div class="col-md-2">
+								
+							</div>
+							<div class="col-sm-8">
+								<button class="btn btn-sm btn-dark">
+									Confirm Now <i class="fa fa-arrow-right"></i>
+								</button>
+							</div>
+							<div class="col-md-2">
+								
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-2">
+					
+				</div>
 			</div>
 		</section>
-		<!-- this is for footer -->
-
 	</div>
 
-	<footer class="page-footer font-small pt-2 background-footer" style="margin-top: 5%">
+	<footer class="page-footer font-small pt-2 background-footer" style="margin-top: 3%">
 		<div class="container-fluid text-center text-md-left content-footer">
 			<div class="row">
 				<div class="col-md-5 mt-md-0 mt-3">

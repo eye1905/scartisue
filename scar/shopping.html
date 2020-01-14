@@ -74,6 +74,7 @@
 		}
 
 		.cards {
+			margin-top: 1%;
 			max-width: 1200px;
 			display: grid;
 			grid-gap: 1rem;
@@ -81,7 +82,7 @@
 
 		/* css media */
 		@media (min-width: 300px) {
-			.cards { grid-template-columns: repeat(2, 1fr); }
+			.cards { grid-template-columns: repeat(3, 1fr); }
 			.form-header{
 				width: 250px;
 			}
@@ -95,14 +96,14 @@
 		}
 
 		@media (min-width: 900px) {
-			.cards { grid-template-columns: repeat(4, 1fr); }
+			.cards { grid-template-columns: repeat(3, 1fr); }
 			.form-header{
 				width: 700px;
 			}
 		}
 
 		@media (min-width: 1100px) {
-			.cards { grid-template-columns: repeat(4, 1fr); }
+			.cards { grid-template-columns: repeat(3, 1fr); }
 			.form-header{
 				width: 900px;
 			}
@@ -320,93 +321,167 @@
 	<!-- This is for body -->
 	<br>
 	<div class="container">
-		<!-- this is for content card produk -->
+		<!-- this is for content -->
 		<section>
 			<div class="card-title text-center">
-				<h4><b>Products</b></h4>
-			</div>
-
-			<div class="cards">
-				<div class="card card-product text-center">
-					<img src="1.png"  alt="...">
-					<h6 class="card-title">Converse All Star</h6>
-					<p>Rp. 100.000</p>
-					<button class="btn btn-sm btn-dark">
-						<i class="fa fa-shopping-cart"></i> Buy
-					</button>
-				</div>
-				<div class="card card-product text-center">
-					<img src="1.png"  alt="...">
-					<h6 class="card-title">Converse All Star</h6>
-					<p>Rp. 100.000</p>
-					<button class="btn btn-sm btn-dark">
-						<i class="fa fa-shopping-cart"></i> Buy
-					</button>
-				</div>
-				<div class="card card-product text-center">
-					<img src="1.png"  alt="...">
-					<h6 class="card-title">Converse All Star</h6>
-					<p>Rp. 100.000</p>
-					<button class="btn btn-sm btn-dark">
-						<i class="fa fa-shopping-cart"></i> Buy
-					</button>
-				</div>
-				<div class="card card-product text-center">
-					<img src="1.png"  alt="...">
-					<h6 class="card-title">Converse All Star</h6>
-					<p>Rp. 100.000</p>
-					<button class="btn btn-sm btn-dark">
-						<i class="fa fa-shopping-cart"></i> Buy
-					</button>
-				</div>
+				<h4><b>Shopping Cart</b></h4>
+				<p>
+					Thank you for shopping at Scar Tisue! <br>
+				</p>
 			</div>
 			<br>
-			<div class="cards">
-				<div class="card card-product text-center">
-					<img src="1.png"  alt="...">
-					<h6 class="card-title">Converse All Star</h6>
-					<p>Rp. 100.000</p>
-					<button class="btn btn-sm btn-dark">
-						<i class="fa fa-shopping-cart"></i> Buy
-					</button>
+			
+			<div class="row">
+				<div class="col-md-2">
+					
 				</div>
-				<div class="card card-product text-center">
-					<img src="1.png"  alt="...">
-					<h6 class="card-title">Converse All Star</h6>
-					<p>Rp. 100.000</p>
-					<button class="btn btn-sm btn-dark">
-						<i class="fa fa-shopping-cart"></i> Buy
-					</button>
+				<div class="col-md-8">
+					<div class="cards">
+						<div class="card-product">
+							<table>
+								<tr>
+									<td>
+										<input type="checkbox" name="check" id="check" placeholder="Chek all" style="width: 15px; height: 15px"> <b>Check All</b>
+									</td>
+								</tr>
+							</table>
+						</div>
+
+					</div>
 				</div>
-				<div class="card card-product text-center">
-					<img src="1.png"  alt="...">
-					<h6 class="card-title">Converse All Star</h6>
-					<p>Rp. 100.000</p>
-					<button class="btn btn-sm btn-dark">
-						<i class="fa fa-shopping-cart"></i> Buy
-					</button>
-				</div>
-				<div class="card card-product text-center">
-					<img src="1.png"  alt="...">
-					<h6 class="card-title">Converse All Star</h6>
-					<p>Rp. 100.000</p>
-					<button class="btn btn-sm btn-dark">
-						<i class="fa fa-shopping-cart"></i> Buy
-					</button>
+				<div class="col-md-2">
+					
 				</div>
 			</div>
 
-			<div class="text-center" style="margin-top: 2%">
-				<button class="btn btn-md btn-secondary" style="border-radius: 20px">
-					<i class="fa fa-refresh" aria-hidden="true"></i> Load More ...
-				</button>
+			<div class="row">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 card">
+					<div class="cards">
+						<div class="card-product">
+							<table>
+								<tr>
+									<td>
+										<input type="checkbox" name="check" id="check" placeholder="Chek all" style="width: 15px; height: 15px">
+									</td>
+									<td>
+										<img src="1.png"  alt="Image Products." style="margin-left: 5px">
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="card-product" style="padding-left: 10%; padding-top: 5%">
+							<h6 class="card-title"><b>Converse All Star</b></h6>
+							<input type="number" name="jumlah[]" id="jumlah[]" placeholder="quantity ..." class="form-control">
+						</div>
+
+						<div class="card-product text-right">
+							<a href="#" style="text-decoration: none; color: red;" class="btn btn-sm">
+								<i class="fa fa-times"></i>
+							</a>
+							<h6><b>Rp. 40.000</b></h6>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 card">
+					<div class="cards">
+						<div class="card-product">
+							<table>
+								<tr>
+									<td>
+										<input type="checkbox" name="check" id="check" placeholder="Chek all" style="width: 15px; height: 15px">
+									</td>
+									<td>
+										<img src="1.png"  alt="Image Products." style="margin-left: 5px">
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="card-product" style="padding-left: 10%; padding-top: 5%">
+							<h6 class="card-title"><b>Converse All Star</b></h6>
+							<input type="number" name="jumlah[]" id="jumlah[]" placeholder="quantity ..." class="form-control">
+						</div>
+
+						<div class="card-product text-right">
+							<a href="#" style="text-decoration: none; color: red;" class="btn btn-sm">
+								<i class="fa fa-times"></i>
+							</a>
+							<h6><b>Rp. 40.000</b></h6>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 card">
+					<div class="cards">
+						<div class="card-product">
+							<table>
+								<tr>
+									<td>
+										<input type="checkbox" name="check" id="check" placeholder="Chek all" style="width: 15px; height: 15px">
+									</td>
+									<td>
+										<img src="1.png"  alt="Image Products." style="margin-left: 5px">
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="card-product" style="padding-left: 10%; padding-top: 5%">
+							<h6 class="card-title"><b>Converse All Star</b></h6>
+							<input type="number" name="jumlah[]" id="jumlah[]" placeholder="quantity ..." class="form-control">
+						</div>
+
+						<div class="card-product text-right">
+							<a href="#" style="text-decoration: none; color: red;" class="btn btn-sm">
+								<i class="fa fa-times"></i>
+							</a>
+							<h6><b>Rp. 40.000</b></h6>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					
+				</div>
+			</div>
+			
+			<div class="row" style="margin-top: 2%">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 text-center">
+					<button class="btn btn-md btn-dark">
+						Check Out <i class="fa fa-arrow-right"></i>
+					</button>
+				</div>
+				<div class="col-md-2">
+					
+				</div>
 			</div>
 		</section>
-		<!-- this is for footer -->
-
 	</div>
 
-	<footer class="page-footer font-small pt-2 background-footer" style="margin-top: 5%">
+	<footer class="page-footer font-small pt-2 background-footer" style="margin-top: 3%">
 		<div class="container-fluid text-center text-md-left content-footer">
 			<div class="row">
 				<div class="col-md-5 mt-md-0 mt-3">
@@ -479,4 +554,24 @@
 
 <script src="template.js"></script>
 
+<script type="text/javascript">
+	$(document).ready(function() {
+		// when ready on load
+		if ($(window).width() < 1024) {
+			$(".card-product img").css("width", "100%");
+		}
+		else {
+			$(".card-product img").css("width", "50%");
+		}
+
+		$(window).resize(function() {
+			if ($(window).width() < 1024) {
+				$(".card-product img").css("width", "100%");
+			}
+			else {
+				$(".card-product img").css("width", "50%");
+			}
+		});
+	});
+</script>
 </html>
